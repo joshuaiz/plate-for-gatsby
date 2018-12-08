@@ -5,7 +5,6 @@ module.exports = {
         subtitle: 'Fetching data from joshuaiz.com'
     },
     plugins: [
-        `gatsby-plugin-sass`,
         /*
          * Gatsby's data processing layer begins with source
          * plugins. Here the site sources its data from Wordpress.
@@ -96,7 +95,7 @@ module.exports = {
                 }
             }
         },
-
+        `gatsby-plugin-sass`,
         'gatsby-plugin-react-helmet',
         {
             resolve: `gatsby-source-filesystem`,

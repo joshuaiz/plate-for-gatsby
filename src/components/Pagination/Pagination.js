@@ -14,16 +14,18 @@ const Pagination = ({ pageContext }) => {
     const previousUrl = index - 1 === 1 ? '' : (index - 1).toString()
     const nextUrl = (index + 1).toString()
 
+    console.log('Pagination page count:', pageCount)
+
     return (
         <nav className="pagination">
-            <div className="previousLink">
+            <div className="previous-link">
                 <NavLink
                     test={first}
                     url={`${pathPrefix}/${previousUrl}`}
                     text="&larr; Previous Page"
                 />
             </div>
-            <div className="nextLink">
+            <div className="next-link">
                 <NavLink
                     test={last}
                     url={`${pathPrefix}/${nextUrl}`}

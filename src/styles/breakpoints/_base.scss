@@ -285,6 +285,13 @@ the cool kids do.
 
 .page-home {}
 
+.page-blog {
+    .main {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+}
+
 .blog {}
 
 .archive {}
@@ -586,38 +593,17 @@ SCREEN READER STYLES
 PAGE NAVI STYLES
 ******************************************************************/
 
-.pagination,
-.wp-prev-next {
+.pagination {
     display: flex;
     justify-content: space-between;
+    margin: 2em 0;
+    padding: 1.5em 0;
+    border-top: 1px solid #ddd;
+    .previous-link, .next-link {
+
+    }
 }
 
-.pagination {
-    ul {}
-
-    li {}
-
-    a, span {
-        &:hover, &:focus {}
-    }
-
-    .current {
-        &:hover, &:focus {}
-    }
-} /* end plate_page_navi */
-
-/* fallback previous & next links */
-.wp-prev-next {
-    ul {}
-
-    .prev-link {
-        float: left;
-    }
-
-    .next-link {
-        float: right;
-    }
-} /* end .wp-prev-next */
 
 /******************************************************************
 COMMENT STYLES
