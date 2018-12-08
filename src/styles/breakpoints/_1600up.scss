@@ -1,0 +1,24 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here for extra large monitors.
+
+******************************************************************/
+
+// .wrap {
+//     width: 1570px; // uncomment if you want to restrict the content width
+// }
+
+#inner-header, #inner-footer {
+    max-width: 1272px; // adjust to your content width or remove for full-width
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+

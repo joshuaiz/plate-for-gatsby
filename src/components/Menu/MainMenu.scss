@@ -1,0 +1,16 @@
+.primary-nav {}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 0 5px;
+        a {
+            font-size: 14px;
+        }
+    }
+}
+

@@ -1,0 +1,406 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+This stylesheet will be used for tablets and larger devices
+like desktops. CSS Grid starts working its magic here so you
+can start to have fun with your layout(s).
+
+******************************************************************/
+
+/*********************
+GLOBAL STYLES
+*********************/
+
+body {}
+
+// Gutenberg styles
+.entry-content {
+    .alignfull {
+        margin-left  : calc( -100vw / 2 + 100% / 2 );
+        margin-right : calc( -100vw / 2 + 100% / 2 );
+        max-width    : 100vw;
+    }
+    .alignwide {
+        margin-right: calc(25% - 25vw);
+        margin-left: calc(25% - 25vw);
+        max-width: 1000%;
+        width: auto;
+    }
+
+    .alignwide img,
+    .alignfull img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+    padding: 1em 1.5em;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+#logo {
+    img {}
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+nav {}
+
+.main-menu {}
+
+.header-nav {
+    // class on the main navigation nav element
+    display: flex;
+    align-items: center; // centers nav links vertically in header
+}
+
+.nav { // the ul element
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
+
+    li {
+        float: left;
+        list-style: none;
+
+        a {
+            display: block;
+            border-bottom: 0;
+            padding: 0 0.5em;
+            text-decoration: none;
+
+            /*
+            you can use hover styles here even though this size
+            has the possibility of being a mobile device.
+            */
+            &:hover, &:focus {
+                text-decoration: underline;
+            }
+        }
+
+        &:first-child {}
+
+        &:last-child {}
+
+        /*
+        plan your menus and drop-downs wisely.
+        */
+        ul.sub-menu,
+        ul.children {
+            position: absolute;
+            z-index: 8999;
+            visibility: hidden;
+
+            li {
+                a {
+                    &:hover,
+                    &:focus {}
+                    &:link {}
+                }
+
+                &:first-child {}
+                &:last-child {
+                    a {
+                        border-bottom: 0;
+                    }
+                }
+
+                /*
+                if you need to go deeper, go nuts
+                just remember deeper menus suck
+                for usability. k, bai.
+                */
+                ul {}
+
+            } /* highlight sub-menu current page */
+            li.current-menu-item,
+            li.current_page_item,
+            li.current_page_ancestor {
+                a {}
+            }
+
+        } /* showing sub-menus */
+
+        &:hover > ul {
+            top: auto;
+            visibility: visible;
+        }
+
+    } /* end .menu ul li */
+
+    /* highlight current page */
+    li.current-menu-item,
+    li.current_page_item,
+    li.current_page_ancestor {
+        a {}
+    } /* end current highlighters */
+
+} /* end .nav */
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+/*
+We like having these classes for use in iPad and larger devices
+so we've copied them here.
+*/
+
+.rtl {}
+.home {}
+.blog {}
+.archive {}
+.date {}
+.date-paged-1 {}
+.search {}
+.search-results {}
+.search-no-results {}
+.search-paged-1 {}
+.error404 {}
+.single {}
+.single-full {
+    // keep the content column a reasonable width
+    #main {
+        max-width: 640px;
+        float: none;
+        margin: 0 auto;
+    }
+}
+.postid-1 {}
+.single-paged-1 {}
+.attachment {}
+.attachmentid-1 {}
+.attachment-mime-type {}
+.author {}
+.author-nicename {}
+.author-paged-1 {}
+.category {}
+.category-1 {}
+.category-paged-1 {}
+.tag {}
+.tag-slug {}
+.tag-paged-1 {}
+.page-template {}
+.page-template-page-php {}
+.page-paged-1 {}
+.page-parent {}
+.page-child {}
+.parent-pageid-1 {}
+.logged-in {}
+.paged {}
+.paged-1 {}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {}
+
+.widgettitle {}
+
+.widget {
+    ul {
+        li {
+            &:first-child {}
+
+            &:last-child {}
+
+            a {}
+
+            /* deep nesting */
+
+            ul {}
+        }
+    }
+}
+
+/*!
+ *
+ * We rarely use these widget classes but they
+ * do come in handy sometimes. Know your widgets.
+ *
+ */
+
+/* links widget */
+.widget_links {}
+
+.widget_links ul {}
+
+.widget_links ul li {}
+
+.widget_links ul li a {}
+
+/* meta widget */
+.widget_meta {}
+
+.widget_meta ul {}
+
+.widget_meta ul li {}
+
+.widget_meta ul li a {}
+
+/* pages widget */
+.widget_pages {}
+
+.widget_pages ul {}
+
+.widget_pages ul li {}
+
+.widget_pages ul li a {}
+
+/* recent-posts widget */
+.widget_recent_entries {}
+
+.widget_recent_entries ul {}
+
+.widget_recent_entries ul li {}
+
+.widget_recent_entries ul li a {}
+
+/* archives widget */
+.widget_archive {}
+
+.widget_archive ul {}
+
+.widget_archive ul li {}
+
+.widget_archive ul li a {}
+
+.widget_archive select {}
+
+.widget_archive option {}
+
+/* tag-cloud widget */
+.widget_links {}
+
+.widget_links li:after {}
+
+.widget_links li:before {}
+
+.widget_tag_cloud {}
+
+.widget_tag_cloud a {}
+
+.widget_tag_cloud a:after {}
+
+.widget_tag_cloud a:before {}
+
+/* calendar widget */
+.widget_calendar {}
+
+#calendar_wrap {}
+
+#calendar_wrap th {}
+
+#calendar_wrap td {}
+
+#wp-calendar tr td {}
+
+#wp-calendar caption {}
+
+#wp-calendar a {}
+
+#wp-calendar #today {}
+
+#wp-calendar #prev {}
+
+#wp-calendar #next {}
+
+#wp-calendar #next a {}
+
+#wp-calendar #prev a {}
+
+/* category widget */
+.widget_categories {}
+
+.widget_categories ul {}
+
+.widget_categories ul li {}
+
+.widget_categories ul ul.children {}
+
+.widget_categories a {}
+
+.widget_categories select {}
+
+.widget_categories select#cat {}
+
+.widget_categories select.postform {}
+
+.widget_categories option {}
+
+.widget_categories .level-0 {}
+
+.widget_categories .level-1 {}
+
+.widget_categories .level-2 {}
+
+.widget_categories .level-3 {}
+
+/* recent-comments widget */
+.recentcomments {}
+
+#recentcomments {}
+
+#recentcomments li {}
+
+#recentcomments li a {}
+
+.widget_recent_comments {}
+
+/* search widget */
+#searchform {}
+
+.widget_search {}
+
+.screen-reader-text {}
+
+/* text widget */
+.textwidget {}
+
+.widget_text {}
+
+.textwidget p {}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+    ul {
+        li {
+            a {
+                &:hover {}
+            }
+
+            /*
+            be careful with the depth of your menus.
+            it's very rare to have multi-depth menus in
+            the footer.
+            */
+            ul {}
+        }
+    }
+} /* end .footer-links */
