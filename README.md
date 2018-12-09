@@ -1,4 +1,4 @@
-#   ?? ?? Plate for Gatsby
+#   🔘 ⚛️ Plate for Gatsby
 This project is a port of our [Plate](https://github.com/joshuaiz/plate) WordPress starter theme to [Gatsby](https://gatsbyjs.org).
 
 **To install:**
@@ -12,14 +12,14 @@ This project is a port of our [Plate](https://github.com/joshuaiz/plate) WordPre
 
 4. In your project directory, run: `gatsby develop`
 
-5. Sweetness ????????????????
+5. Sweetness 🚀🚀🚀🚀🚀🚀🚀🚀
 
 
-## ?? What is this?
+## 👉 What is this?
 
 **Plate for Gatsby** is a super-cool, minimal-set-up custom Gatsby starter to link a current WordPress install to a Gatsby-created site. 
 
-#### GatsbyJS + WordPress = ??
+#### GatsbyJS + WordPress = 💯
 
 Use WordPress as your content source with a Gatsby front end and be up-and-running in seconds.
 
@@ -83,3 +83,10 @@ While there are many other examples of headless WordPress React starters and pro
 
 ## What Plate for Gatsby doesn't include
 - search. As a search index has to be custom-built for each site and not all sites will need it, I've left search out. To include search in your Gatsby project, see the [Adding Search docs](https://www.gatsbyjs.org/docs/adding-search/).
+
+
+
+
+
+
+
