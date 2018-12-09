@@ -12,6 +12,11 @@ module.exports = `
                     template
                     excerpt
                     content
+                    date(formatString: "MMMM DD, YYYY")
+                    featured_media {
+                        source_url
+                        alt_text
+                    }
                 }
             }
         }
@@ -29,6 +34,10 @@ module.exports = `
                     date(formatString: "MMMM DD, YYYY")
                     excerpt
                     content
+                    featured_media {
+                        source_url
+                        alt_text
+                    }
                     categories {
                         id
                         wordpress_id
@@ -52,6 +61,26 @@ module.exports = `
                             }
                         }
                     }
+                }
+            }
+        }
+
+        allWordpressWpComments {
+            edges {
+                node {
+                    id
+                    wordpress_id
+                    post
+                    author
+                    author_name
+                    author_url
+                    author_avatar_urls {
+                        wordpress_96
+                    }
+                    date(formatString: "MMMM DD, YYYY")
+                    content
+                    status
+                    type
                 }
             }
         }

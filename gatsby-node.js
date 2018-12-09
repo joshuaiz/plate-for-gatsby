@@ -1,4 +1,5 @@
 /**
+ *
  * If you are using a local unsigned TLS/SSL cert, the below
  * NODE_TLS thingy must be present for GraphQL to work.
  *
@@ -17,8 +18,13 @@ exports.createPages = ({ graphql, actions }) => {
 
     return new Promise((resolve, reject) => {
         // Templates
+        // Page Template
         const pageTemplate = path.resolve('./src/templates/page.js')
+
+        // Post Template. Use either one of these or conditionally render
+        // postwithsidebar.js on certain posts
         const postTemplate = path.resolve('./src/templates/post.js')
+        // const postTemplate = path.resolve('./src/templates/postwithsidebar.js')
 
         resolve(
             graphql(queryAll).then(result => {

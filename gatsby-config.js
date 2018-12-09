@@ -1,8 +1,21 @@
 /* eslint-disable */
 module.exports = {
     siteMetadata: {
-        title: 'Plate Gatsby',
-        subtitle: 'Fetching data from joshuaiz.com'
+        // Change these for your project.
+        title: 'Plate for Gatsby',
+        subtitle: 'A starter for Gatsby + WordPress built with Plate',
+        description:
+            'Plate for Gatsby is a stripped-down Gatsby + WordPress starter project. Features: default GraphQL queries, a11y-optimized, schema, meta tags, pagination. Based on the Plate WordPress starter theme.',
+        author: 'studio.bio',
+        url: 'https://studio.bio',
+        repo: 'https://github.com/joshuaiz/plate-for-gatsby',
+        image: 'https://studio.bio/images/plategb_fb.png',
+        // These are default images for pages without them explicitly set
+        // You should create two different images. See here:
+        // https://iamturns.com/open-graph-image-size/
+        facebookImage: 'https://studio.bio/images/plategb_fb.png',
+        twitterImage: 'https://studio.bio/images/plategb_twitter.png',
+        twitterUser: '@studio_bio'
     },
     plugins: [
         /*
@@ -85,10 +98,11 @@ module.exports = {
                     '/*/*/tags',
                     '/*/*/taxonomies',
                     '/*/*/users',
-                    '/*/*/menus'
+                    '/*/*/menus',
+                    '/*/*/comments'
                 ],
                 // Blacklisted routes using glob patterns
-                excludedRoutes: ['/*/*/posts/1456'],
+                // excludedRoutes: ['/*/*/posts/1456'],
                 // use a custom normalizer which is applied after the built-in ones.
                 normalizer: function({ entities }) {
                     return entities

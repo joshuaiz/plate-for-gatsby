@@ -6,3 +6,15 @@
     max-width: 640px;
     margin: 0 auto;
 }
+
+.flex-wrap {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    .content {
+        padding-right: 2.2em;
+        .hentry {
+            max-width: 100%;
+        }
+    }
+}

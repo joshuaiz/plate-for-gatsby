@@ -1,26 +1,28 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
+import PageMeta from '../components/SiteMeta/PageMeta'
 import Layout from '../layouts/DefaultLayout'
 import PageContent from '../components/PageContent/PageContent'
 
 const PageTemplate = ({ data }) => {
-    const currentPage = data.wordpressPage
+    const page = data.wordpressPage
     const site = data.site.siteMetadata
 
     return (
         <Layout>
+            <PageMeta isPage page={page} site={site} />
             <Helmet
-                title={`${site.title} - ${currentPage.title}`}
+                title={`${site.title} - ${page.title}`}
                 meta={[
                     { name: 'description', content: 'Sample' },
                     { name: 'keywords', content: 'sample, something' }
                 ]}
                 bodyAttributes={{
-                    class: `page pageid-${currentPage.wordpress_id} page-${currentPage.slug}`
+                    class: `page pageid-${page.wordpress_id} page-${page.slug}`
                 }}
             />
-            <PageContent currentPage={currentPage} />
+            <PageContent page={page} />
         </Layout>
     )
 }
@@ -34,8 +36,13 @@ export const pageQuery = graphql`
             wordpress_id
             title
             content
+            excerpt
             slug
             date(formatString: "MMMM DD, YYYY")
+            featured_media {
+                source_url
+                alt_text
+            }
         }
         site {
             id

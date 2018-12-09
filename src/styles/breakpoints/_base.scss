@@ -34,6 +34,17 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+// Push footer to the bottom using flexbox
+// See here: https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    .content {
+        flex: 1;
+    }
+}
+
 img {
     display: block; // removes added default margin
     // responsive images by default
@@ -122,6 +133,10 @@ h1, .h1 {
 h1.page-title {
     font-size: 2.5em;
     margin-top: 1em;
+}
+
+.page-title, .post-title, .archive-title {
+    line-height: 1;
 }
 
 h2, .h2 {
@@ -263,7 +278,7 @@ the cool kids do.
 
 .page-index {
     .main {
-        max-width: 900px;
+        max-width: 640px;
         margin: 0 auto;
     }
     .entry-content {
@@ -327,6 +342,16 @@ the cool kids do.
 }
 
 .single {}
+
+.single-post {
+    .main {
+        max-width: 640px;
+        margin: 0 auto;
+    }
+    .post-comments {
+        max-width: 640px;
+    }
+}
 
 .single-full {}
 
@@ -593,16 +618,21 @@ SCREEN READER STYLES
 PAGE NAVI STYLES
 ******************************************************************/
 
-.pagination {
-    display: flex;
-    justify-content: space-between;
-    margin: 2em 0;
-    padding: 1.5em 0;
-    border-top: 1px solid #ddd;
-    .previous-link, .next-link {
+// .pagination {
+//     .previous-next {
+//         display: flex;
+//         justify-content: space-between;
+//         margin: 2em 0;
+//         padding: 1.5em 0;
+//         border-top: 1px solid #ddd;
+//         .previous-link, .next-link {
 
-    }
-}
+//         }
+//     }
+//     .pagination-list {
+//         display: flex;
+//     }
+// }
 
 
 /******************************************************************
