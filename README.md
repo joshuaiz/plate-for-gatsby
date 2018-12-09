@@ -1,97 +1,85 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+#   ?? ?? Plate for Gatsby
+This project is a port of our [Plate](https://github.com/joshuaiz/plate) WordPress starter theme to [Gatsby](https://gatsbyjs.org).
 
-Kick off your project with this default boilerplate ([live demo](https://gatsby-starter-default-demo.netlify.com/)). This barebones starter ships with the main Gatsby configuration files you might need. 
+**To install:**
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+1. Start a new project:<br/>
+`gatsby new your-project https://github.com/joshuaiz/plate-for-gatsby`
 
-## 🚀 Quick start
+2. `cd your-project`
 
-1.  **Create a Gatsby site.**
+3. In `gatsby-config.js` under `gatsby-source-wordpress` change `baseUrl` to the url of your WordPress install.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+4. In your project directory, run: `gatsby develop`
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter
-    ```
+5. Sweetness ????????????????
 
-1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+## ?? What is this?
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+**Plate for Gatsby** is a super-cool, minimal-set-up custom Gatsby starter to link a current WordPress install to a Gatsby-created site. 
 
-1.  **Open the source code and start editing!**
+#### GatsbyJS + WordPress = ??
 
-    Your site is now running at `http://localhost:8000`!
-    
-    *Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-    
-## 🧐 What's inside?
+Use WordPress as your content source with a Gatsby front end and be up-and-running in seconds.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+### Features
+- includes main GraphQL queries for pages, posts, menus *already set up*. Just add your source url to the project and your posts, pages and menus are there automagically.
+<br />
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
+- pre-built, ready-to-use components: header, page templates, post templates, footer, menus, archives.
+<br />
 
-  1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.  
-  
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
+- modular scss/sass with global and class-based styles. Want to use CSS Modules? Gatsby has [CSS Module support built-in](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and it works with scss out-of-the-box.
 
-## 🎓 Learning Gatsby
+More than just a theme, **Plate for Gatsby** includes the main GraphQL queries for posts, pages, menus built-in and ready-to-go. well as your main components: page, post, header, main, sidebar, footer  along with mapped, modular scss so you can start customizing your components and templates right away. 
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+As with our traditional PHP/SCSS/js Plate theme, Plate for Gatsby has all of the components and HTML structure you need to get your headless WordPress project up and running fast. 
 
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+It's bare-bones but with some smart defaults so you aren't starting from nothing. The component/HTML structure is mirrored by the default CSS/SCSS classes in an intelligent way to help speed up development and keep everything organized.
 
--   **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+At [studio.bio](https://studio.bio/) we really love working with React and once we tried Gatsby we were hooked. By keeping our clients' WordPress back end while moving to React/Gatsby for the front end, it's the best of both worlds combining the ease-of-use of WordPress with the performance of JavaScript.
 
-## 💫 Deploy
+To aid in these types of projects, we needed a ready-to-go starter theme so it made perfect sense to adapt our existing Plate WordPress starter theme for use with Gatsby.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+## Use Cases
+- for existing mostly static WordPress sites with a lot of content that could benefit from serverless performance. 
+- you have clients whose teams are comfortable entering their content in WordPress but need a more performant site.
+- to create a site that uses a subset another site's WordPress data.
+
+### Sounds...erm...*cool*...I think?
+
+If you're not familiar with Gatsby, React, GraphQL but are curious, see the <a href="#background">Background</a> section below.
+
+## Requirements
+In order for Plate to work with Gatsby and to help other developers, we had to set some initial ground rules for the Gatsby version of Plate:
+
+1. Use as few dependencies as possible
+2. Maintain the same HTML structure as the traditional WordPress Plate theme wherever possible; this includes the markup and classes (classNames)
+3. Keep the modular scss structure of Plate along with media queries
+4. Maintain the spirit of Plate by providing useful and informative comments throughout.
+
+With these requirements, along with the original Plate theme, we hope that Plate for Gatsby can be a great springboard for advanced developers as well as a learning tool for not-so-experienced ones.
+
+To do this, Plate needs your help! Contribute to the project, give feedback or do some testing. The more input, the better this will be.
+
+<span id="background"></span>
+## Background
+[Gatsby](https://gatsbyjs.org) is a site builder using [React](https://reactjs.org) plus [GraphQL](https://graphql.org) and is perfect for quickly building static (or not-so-static) websites. 
+
+With WordPress, this type of site is called *headless* because the front end (the site that is visited on the web) is completely decoupled from the back end (where you enter and save your content).
+
+Thus using this setup, the site content is entered using the WordPress admin we know and love, yet with Gatsby, the built front end takes advantage of all the latest features of the modern JavaScript web: serverless, optimized, compressed pages that load instantly. What's more, site edits (both content and design) are updated __in real time__. 
+
+## Why did we choose Gatsby? 
+While there are many other examples of headless WordPress React starters and progressive web app frameworks out there (many of which we experimented wit and are really good), we decided to port our WordPress theme to Gatsby for the following reasons:
+
+- easy set up
+- fun to work with
+- great documentation
+- rapid adoption by the React/JavaScript community
+- thriving ecosystem
+- ready-to-go [WordPress source plugin](https://www.gatsbyjs.org/packages/gatsby-source-wordpress/)
+
+## What Plate for Gatsby doesn't include
+- search. As a search index has to be custom-built for each site and not all sites will need it, I've left search out. To include search in your Gatsby project, see the [Adding Search docs](https://www.gatsbyjs.org/docs/adding-search/).
