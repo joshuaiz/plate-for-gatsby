@@ -84,9 +84,3 @@ While there are many other examples of headless WordPress React starters and pro
 ## What Plate for Gatsby doesn't include
 - search. As a search index has to be custom-built for each site and not all sites will need it, I've left search out. To include search in your Gatsby project, see the [Adding Search docs](https://www.gatsbyjs.org/docs/adding-search/).
 
-
-
-
-
-
-
