@@ -14,7 +14,7 @@ import React from 'react'
 import Parser from 'html-react-parser'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import Layout from '../layouts/DefaultLayout'
+import Layout from '../components/Layout/DefaultLayout'
 
 const PageTemplate = ({ data }) => {
     const currentPage = data.wordpressPage

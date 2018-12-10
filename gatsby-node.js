@@ -23,8 +23,8 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Post Template. Use either one of these or conditionally render
         // postwithsidebar.js on certain posts
-        const postTemplate = path.resolve('./src/templates/post.js')
-        // const postTemplate = path.resolve('./src/templates/postwithsidebar.js')
+        // const postTemplate = path.resolve('./src/templates/post.js')
+        const postTemplate = path.resolve('./src/templates/postwithsidebar.js')
 
         resolve(
             graphql(queryAll).then(result => {
@@ -59,7 +59,8 @@ exports.createPages = ({ graphql, actions }) => {
                         path: `/post/${edge.node.slug}/`,
                         component: slash(postTemplate),
                         context: {
-                            id: edge.node.id
+                            id: edge.node.id,
+                            postId: edge.node.wordpress_id
                         }
                     })
                 })

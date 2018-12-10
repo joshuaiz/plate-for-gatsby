@@ -2,17 +2,23 @@ import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import './MainMenu.scss'
 
-const MainMenu = ({ data }) => {
-    // console.log(data)
+const MainMenu = ({ data, location }) => {
     const menu = data.allWordpressWpApiMenusMenusItems.edges[0].node.items
-    // console.log(menu)
+
+    // get current page so we can add 'current-menu-item' class
+    const currentUrl = location ? location.pathname.replace(/\//g, '') : null
+
     return (
         <nav className="primary-nav">
             <ul className="main-menu">
                 {menu.map(item => (
                     <li
                         key={`${item.object_slug}-${item.object_id}`}
-                        id={`${item.object_slug}-${item.object_id}`}
+                        className={`menu-item menu-item-${item.object_slug} ${
+                            currentUrl && currentUrl === item.object_slug
+                                ? 'current-menu-item'
+                                : null
+                        }`}
                     >
                         <Link to={item.object_slug}>{item.title}</Link>
                     </li>
@@ -27,7 +33,7 @@ const MainMenu = ({ data }) => {
 export default props => (
     <StaticQuery
         query={graphql`
-            query LayoutQuery {
+            query menuQuery {
                 allWordpressWpApiMenusMenusItems {
                     edges {
                         node {
@@ -44,6 +50,6 @@ export default props => (
                 }
             }
         `}
-        render={data => <MainMenu data={data} />}
+        render={data => <MainMenu data={data} {...props} />}
     />
 )

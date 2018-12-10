@@ -4,7 +4,7 @@ import MainMenu from '../Menu/MainMenu'
 import Logo from './Logo/Logo'
 import './Header.scss'
 
-const Header = ({ data }) => {
+const Header = ({ data, location }) => {
     const title = data.site.siteMetadata.title
 
     return (
@@ -14,7 +14,7 @@ const Header = ({ data }) => {
                 <div className="site-title">
                     <Link to="/">{title}</Link>
                 </div>
-                <MainMenu />
+                <MainMenu location={location} />
             </div>
         </header>
     )

@@ -13,20 +13,28 @@ import Img from 'gatsby-image'
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
+/**
+ * Plate isn't using this component by default but it's here if you need it.
+ */
+
 const Image = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+    <StaticQuery
+        query={graphql`
+            query {
+                placeholderImage: file(
+                    relativePath: { eq: "gatsby-astronaut.png" }
+                ) {
+                    childImageSharp {
+                        fluid(maxWidth: 300) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
             }
-          }
-        }
-      }
-    `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
+        `}
+        render={data => (
+            <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+        )}
+    />
 )
 export default Image

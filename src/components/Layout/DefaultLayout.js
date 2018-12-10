@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react'
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 import './style.scss'
 
-const DefaultLayout = ({ children }) => (
+const DefaultLayout = ({ children, location }) => (
     <Fragment>
         <div className="container">
-            <Header />
+            <Header location={location} />
             <div className="content">
                 <div className="inner-content wrap">
                     <main className="main">{children}</main>

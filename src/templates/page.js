@@ -2,15 +2,16 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PageMeta from '../components/SiteMeta/PageMeta'
-import Layout from '../layouts/DefaultLayout'
-import PageContent from '../components/PageContent/PageContent'
+import Layout from '../components/Layout/DefaultLayout'
+import PageContent from '../components/Page/PageContent/PageContent'
 
-const PageTemplate = ({ data }) => {
+const PageTemplate = ({ data, location }) => {
+
     const page = data.wordpressPage
     const site = data.site.siteMetadata
 
     return (
-        <Layout>
+        <Layout location={location}>
             <PageMeta isPage page={page} site={site} />
             <Helmet
                 title={`${site.title} - ${page.title}`}

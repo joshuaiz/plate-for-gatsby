@@ -3,19 +3,15 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import PostMeta from '../components/SiteMeta/PostMeta'
-import PostContent from '../components/PostContent/PostContent'
-import PostComments from '../components/PostComments/PostComments'
-import Layout from '../layouts/DefaultLayout'
+import PostContent from '../components/Post/PostContent/PostContent'
+import PostComments from '../components/Post/PostComments/PostComments'
+import Layout from '../components/Layout/DefaultLayout'
 import './post.scss'
 
 const PostTemplate = ({ data }) => {
     const post = data.wordpressPost
     const site = data.site.siteMetadata
     const comments = data.allWordpressWpComments.edges
-
-    console.log('Comments', comments)
-
-    console.log('Post', data)
 
     // Yeah this isn't pretty, but it works
     const categories = `${post.categories
@@ -47,8 +43,8 @@ PostTemplate.propTypes = {
 
 export default PostTemplate
 
-export const pageQuery = graphql`
-    query($id: String!) {
+export const postQuery = graphql`
+    query($id: String!, $postId: Int!) {
         wordpressPost(id: { eq: $id }) {
             id
             wordpress_id
@@ -74,7 +70,7 @@ export const pageQuery = graphql`
             content
             excerpt
         }
-        allWordpressWpComments(filter: {post: {eq: 198}}) {
+        allWordpressWpComments(filter: {post: {eq: $postId}}) {
             edges {
                 node {
                     id

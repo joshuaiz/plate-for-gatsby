@@ -1,16 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import Layout from '../layouts/DefaultLayout'
-import PageList from '../components/PageList/PageList'
-import PostList from '../components/PostList/PostList'
+import Layout from '../components/Layout/DefaultLayout'
+import PageList from '../components/Page/PageList/PageList'
+import PostList from '../components/Post/PostList/PostList'
 
 const NotFoundPage = ({ data }) => {
     const pages = data.allWordpressPage.edges
     const posts = data.allWordpressPost.edges
-    // console.log(data)
-    console.log(pages)
-
+    
     return (
         <Layout>
             <Helmet

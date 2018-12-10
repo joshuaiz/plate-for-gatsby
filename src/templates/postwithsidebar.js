@@ -3,14 +3,20 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import PostMeta from '../components/SiteMeta/PostMeta'
-import PostContent from '../components/PostContent/PostContent'
-import SidebarLayout from '../layouts/SidebarLayout'
+import PostContent from '../components/Post/PostContent/PostContent'
+import PostComments from '../components/Post/PostComments/PostComments'
+import SidebarLayout from '../components/Layout/SidebarLayout'
 import './post.scss'
 
 const PostTemplate = ({ data }) => {
-    
+
     const post = data.wordpressPost
     const site = data.site.siteMetadata
+
+    // check if we have comments attached to post
+    const comments = (data.allWordpressWpComments 
+        ? data.allWordpressWpComments.edges 
+        : null)
 
     console.log('Post with sidebar', data)
 
@@ -33,6 +39,7 @@ const PostTemplate = ({ data }) => {
                 }}
             />
             <PostContent post={post} />
+            <PostComments comments={comments} />
         </SidebarLayout>
     )
 }
@@ -43,8 +50,8 @@ PostTemplate.propTypes = {
 
 export default PostTemplate
 
-export const pageQuery = graphql`
-    query($id: String!) {
+export const postWithSidebarQuery = graphql`
+    query($id: String!, $postId: Int!) {
         wordpressPost(id: { eq: $id }) {
             id
             wordpress_id
@@ -70,7 +77,7 @@ export const pageQuery = graphql`
             content
             excerpt
         }
-        allWordpressWpComments {
+        allWordpressWpComments(filter: {post: {eq: $postId}}) {
             edges {
                 node {
                     id

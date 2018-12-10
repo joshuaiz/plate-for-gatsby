@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Header from '../components/Header/Header'
-import PostList from '../components/PostList/PostList'
+import Header from '../Header/Header'
+import PostList from '../Post/PostList/PostList'
 import './style.scss'
 
 const SidebarLayout = ({ children, data }) => {

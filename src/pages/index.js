@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../layouts/DefaultLayout'
+import Layout from '../components/Layout/DefaultLayout'
 
 const IndexPage = () => (
     <Layout>
@@ -47,6 +47,10 @@ const IndexPage = () => (
                     <code>/components/Header/Logo/logo.svg</code> with your logo.
                 </li>
                 <li>
+                    <strong> View your <a href="/posts/">posts</a>.</strong> They have already been
+                    queried for you. Sweetness.
+                </li>
+                <li>
                     <strong>🏗 Build Your Site:</strong><br />
                     Run <code>gatsby build</code> to create a production-ready build of your site.
                 </li>
@@ -64,7 +68,7 @@ const IndexPage = () => (
             <p>Submit an issue on <a href="https://github.com/joshuaiz/plate-for-gatsby" target="_blank" rel="noopener noreferrer">GitHub.</a></p>
             <p>Contributions are welcome!</p>
         </div>
-        
+
     </Layout>
 )
 

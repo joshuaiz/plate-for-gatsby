@@ -27,9 +27,9 @@ const Pagination = ({ pageContext }) => {
         index,
         first,
         last,
+        pageCount,
         page,
         pages,
-        pageCount,
         pathPrefix
     } = pageContext
 
