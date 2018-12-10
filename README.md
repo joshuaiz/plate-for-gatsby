@@ -24,17 +24,13 @@ This project is a port of our [Plate](https://github.com/joshuaiz/plate) WordPre
 Use WordPress as your content source with a Gatsby front end and be up-and-running in seconds.
 
 ### Features
-- includes main GraphQL queries for pages, posts, menus *already set up*. Just add your source url to the project and your posts, pages and menus are there automagically.
-<br />
+- includes main GraphQL queries for pages, posts, post comments, menus *already set up*. Just add your source url to the project and your posts, pages and menus are there automagically. We love automagically.
 
-- pre-built, ready-to-use components: header, page templates, post templates, footer, menus, archives.
-<br />
+- pre-built, ready-to-use components: header, page templates, post templates, footer, menus, comments.
 
 - modular scss/sass with global and class-based styles. Want to use CSS Modules? Gatsby has [CSS Module support built-in](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and it works with scss out-of-the-box.
 
 More than just a theme, **Plate for Gatsby** includes the main GraphQL queries for posts, pages, menus built-in and ready-to-go. well as your main components: page, post, header, main, sidebar, footer  along with mapped, modular scss so you can start customizing your components and templates right away. 
-
-As with our traditional PHP/SCSS/js Plate theme, Plate for Gatsby has all of the components and HTML structure you need to get your headless WordPress project up and running fast. 
 
 It's bare-bones but with some smart defaults so you aren't starting from nothing. The component/HTML structure is mirrored by the default CSS/SCSS classes in an intelligent way to help speed up development and keep everything organized.
 
@@ -72,7 +68,7 @@ With WordPress, this type of site is called *headless* because the front end (th
 Thus using this setup, the site content is entered using the WordPress admin we know and love, yet with Gatsby, the built front end takes advantage of all the latest features of the modern JavaScript web: serverless, optimized, compressed pages that load instantly. What's more, site edits (both content and design) are updated __in real time__. 
 
 ## Why did we choose Gatsby? 
-While there are many other examples of headless WordPress React starters and progressive web app frameworks out there (many of which we experimented wit and are really good), we decided to port our WordPress theme to Gatsby for the following reasons:
+While there are many other examples of headless WordPress React starters and progressive web app frameworks out there (many of which we experimented with and are really good), we decided to port our WordPress theme to Gatsby for the following reasons:
 
 - easy set up
 - fun to work with
