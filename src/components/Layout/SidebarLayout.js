@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../Header/Header'
 import Sidebar from '../Sidebar/Sidebar'
+import Footer from '../Footer/Footer'
 import './style.scss'
 
 const SidebarLayout = ({ children, data }) => {
@@ -27,6 +28,7 @@ const SidebarLayout = ({ children, data }) => {
                      */}
                     <Sidebar posts={posts} />
                 </div>
+                <Footer />
             </div>
         </Fragment>
     )

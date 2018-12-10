@@ -1,19 +1,29 @@
 #   🔘 ⚛️ Plate for Gatsby
-This project is a port of our [Plate](https://github.com/joshuaiz/plate) WordPress starter theme to [Gatsby](https://gatsbyjs.org).
+This project is a port of our [Plate](https://github.com/joshuaiz/plate) WordPress starter theme to [Gatsby](https://gatsbyjs.org). It's a fully functioning Gatsby + WordPress starter to grab data from an existing WordPress install. 
 
-**To install:**
+Intrigued? Start now or [read more](#what-is-this).
+
+🚀 **Quick Start:**
 
 1. Start a new project:<br/>
 `gatsby new your-project https://github.com/joshuaiz/plate-for-gatsby`
 
 2. `cd your-project`
 
-3. In `gatsby-config.js` under `gatsby-source-wordpress` change `baseUrl` to the url of your WordPress install.
+3. In `gatsby-config.js` under `gatsby-source-wordpress` change `baseUrl` to the url of your WordPress install. This must be a working site. Local dev sites are ok but they must be running.
 
-4. In your project directory, run: `gatsby develop`
+4. To expose your WordPress menus to the REST API, install and activate the [WP API Menus](https://wordpress.org/plugins/wp-api-menus/) plugin on your WordPress site.
 
-5. Sweetness 🚀🚀🚀🚀🚀🚀🚀🚀
+5. In your project directory, run: `gatsby develop`
 
+6. Sweetness 🚀🚀🚀🚀🚀🚀🚀🚀
+
+🔑 If you want to get your hands dirty right away, skip steps 2 & 3 above and just run `gatsby develop` from your project directory. It will grab the WordPress data from the demo site. You can play around with the code to your heart's content.
+
+####  🐙 Dive deeper:
+- [Using Gatsby with WordPress](https://www.gatsbyjs.com/guides/wordpress/)
+- [WordPress Source Plugin Tutorial](https://www.gatsbyjs.org/docs/wordpress-source-plugin-tutorial/)
+- [Sourcing from WordPress](https://www.gatsbyjs.org/docs/sourcing-from-wordpress/)
 
 ## 👉 What is this?
 
@@ -24,7 +34,7 @@ This project is a port of our [Plate](https://github.com/joshuaiz/plate) WordPre
 Use WordPress as your content source with a Gatsby front end and be up-and-running in seconds.
 
 ### Features
-- includes main GraphQL queries for pages, posts, post comments, menus *already set up*. Just add your source url to the project and your posts, pages and menus are there automagically. We love automagically.
+- includes main GraphQL queries for pages, posts, post comments, and menus *already set up*. Just add your source url to the project and your posts, pages and menus are there automagically. We love automagically.
 
 - pre-built, ready-to-use components: header, page templates, post templates, footer, menus, comments.
 
@@ -32,7 +42,7 @@ Use WordPress as your content source with a Gatsby front end and be up-and-runni
 
 More than just a theme, **Plate for Gatsby** includes the main GraphQL queries for posts, pages, menus built-in and ready-to-go. well as your main components: page, post, header, main, sidebar, footer  along with mapped, modular scss so you can start customizing your components and templates right away. 
 
-It's bare-bones but with some smart defaults so you aren't starting from nothing. The component/HTML structure is mirrored by the default CSS/SCSS classes in an intelligent way to help speed up development and keep everything organized.
+It's bare-bones but with some smart defaults so you aren't starting from absolutely nothing. The component/HTML structure is mirrored by the default CSS/SCSS classes in an intelligent way to help speed up development and keep everything organized.
 
 At [studio.bio](https://studio.bio/) we really love working with React and once we tried Gatsby we were hooked. By keeping our clients' WordPress back end while moving to React/Gatsby for the front end, it's the best of both worlds combining the ease-of-use of WordPress with the performance of JavaScript.
 
@@ -42,6 +52,7 @@ To aid in these types of projects, we needed a ready-to-go starter theme so it m
 - for existing mostly static WordPress sites with a lot of content that could benefit from serverless performance. 
 - you have clients whose teams are comfortable entering their content in WordPress but need a more performant site.
 - to create a site that uses a subset another site's WordPress data.
+- those wanting to try out the latest and greatest.
 
 ### Sounds...erm...*cool*...I think?
 
@@ -50,9 +61,9 @@ If you're not familiar with Gatsby, React, GraphQL but are curious, see the <a h
 ## Requirements
 In order for Plate to work with Gatsby and to help other developers, we had to set some initial ground rules for the Gatsby version of Plate:
 
-1. Use as few dependencies as possible
-2. Maintain the same HTML structure as the traditional WordPress Plate theme wherever possible; this includes the markup and classes (classNames)
-3. Keep the modular scss structure of Plate along with media queries
+1. **Use as few dependencies as possible.** Nothing is worse than wanting to dive in to a project and having to spend hours loading all the required modules. Ain't nobody got time for that!
+2. **Maintain the same HTML structure as the traditional WordPress Plate theme wherever possible.** This includes the markup and classes (classNames) which we've tried to mirror from Plate.
+3. Keep the modular scss structure of Plate along with media queries.
 4. Maintain the spirit of Plate by providing useful and informative comments throughout.
 
 With these requirements, along with the original Plate theme, we hope that Plate for Gatsby can be a great springboard for advanced developers as well as a learning tool for not-so-experienced ones.
@@ -82,4 +93,18 @@ While there are many other examples of headless WordPress React starters and pro
 - **Menus more than one level deep.** You'll have to build your own drop-down menus if you have a nested navigation.
 - **Unique permalink structures.** If your WordPress install has permalinks like `/%category%/%postname%/` you'll have to set up that kind of routing yourself, but it can be done!
 - **Forms.** Gatsby doesn't support forms out-of-the-box but [Netlify can](https://codebushi.com/form-handling-gatsby-netlify/).
+
+## Other stuffs
+This is an alpha release and as such use with caution on any production sites. While Gatsby is on v2 it still is maturing and thus things are likely to break or change.
+
+## Next Steps for Plate for Gatsby
+- Add documentation/wiki
+- Test deployments on other services than Netlify
+- For 2.0: move all queries to GraphQL/WPGraphQL. While Gatsby uses GraphQL, it is still querying from the WP REST API which is somewhat limited.
+
+## 🧡 Thank You
+Thanks to:
+- the entire GatsbyJS team, especially @KyleAMathews, @pieh, @ahmadawais.
+- @jasonbahl and the WPGraphQL team
+- All the OSS peoples making the world a better place
 

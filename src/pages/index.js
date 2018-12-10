@@ -47,7 +47,7 @@ const IndexPage = () => (
                     <code>/components/Header/Logo/logo.svg</code> with your logo.
                 </li>
                 <li>
-                    <strong> View your <a href="/posts/">posts</a>.</strong> They have already been
+                    <strong>📝 View your <a href="/posts/">posts</a> (at <code>/posts/</code>).</strong> They have already been
                     queried for you. Sweetness.
                 </li>
                 <li>
@@ -65,8 +65,8 @@ const IndexPage = () => (
             </ul>
 
             <h3>🐞 Having trouble or found a bug?</h3>
-            <p>Submit an issue on <a href="https://github.com/joshuaiz/plate-for-gatsby" target="_blank" rel="noopener noreferrer">GitHub.</a></p>
-            <p>Contributions are welcome!</p>
+            <p>Submit an issue on <a href="https://github.com/joshuaiz/plate-for-gatsby/issues" target="_blank" rel="noopener noreferrer">GitHub.</a></p>
+            <p>Contributions and PRs are welcome!</p>
         </div>
 
     </Layout>
