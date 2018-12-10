@@ -78,5 +78,8 @@ While there are many other examples of headless WordPress React starters and pro
 - ready-to-go [WordPress source plugin](https://www.gatsbyjs.org/packages/gatsby-source-wordpress/)
 
 ## What Plate for Gatsby doesn't include
-- search. As a search index has to be custom-built for each site and not all sites will need it, I've left search out. To include search in your Gatsby project, see the [Adding Search docs](https://www.gatsbyjs.org/docs/adding-search/).
+- **Search.** As a search index has to be custom-built for each site and not all sites will need it, we've left search out. To include search in your Gatsby project, see the [Adding Search docs](https://www.gatsbyjs.org/docs/adding-search/).
+- **Menus more than one level deep.** You'll have to build your own drop-down menus if you have a nested navigation.
+- **Unique permalink structures.** If your WordPress install has permalinks like `/%category%/%postname%/` you'll have to set up that kind of routing yourself, but it can be done!
+- **Forms.** Gatsby doesn't support forms out-of-the-box but [Netlify can](https://codebushi.com/form-handling-gatsby-netlify/).
 
