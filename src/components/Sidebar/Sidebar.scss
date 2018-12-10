@@ -1,0 +1,24 @@
+aside {
+    padding: 1em 1.5em;
+}
+
+.sidebar {}
+
+.widgettitle {}
+
+.widget {
+    ul {
+        li {
+            &:first-child {}
+
+            &:last-child {}
+
+            a {}
+
+            /* deep nesting */
+            ul {}
+        }
+    }
+}
+
+.no-widgets {}

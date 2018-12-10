@@ -6,7 +6,7 @@ import PostMeta from '../components/SiteMeta/PostMeta'
 import PostContent from '../components/Post/PostContent/PostContent'
 import PostComments from '../components/Post/PostComments/PostComments'
 import SidebarLayout from '../components/Layout/SidebarLayout'
-import './post.scss'
+import '../components/Post/Post.scss'
 
 const PostTemplate = ({ data }) => {
 

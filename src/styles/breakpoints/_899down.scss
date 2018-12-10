@@ -11,3 +11,15 @@ Use this for tweener device sizes. We don't use this stylesheet
 often but on occasion it comes in handy.
 
 ******************************************************************/
+
+.flex-wrap {
+    flex-wrap: wrap;
+    .content {
+        .main {
+            max-width: 100%;
+        }
+    }
+    aside {
+        width: 100%;
+    }
+}

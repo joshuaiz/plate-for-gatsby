@@ -12,3 +12,11 @@ You can add some advanced styles for larger devices here if you like.
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.single-post {
+    .with-sidebar {
+        .flex-wrap {
+            width: 1200px;
+        }
+    }
+}
