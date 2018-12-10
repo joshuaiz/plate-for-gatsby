@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import './footer.scss'
+import './Footer.scss'
 
 const Footer = ({ data }) => {
     const year = new Date().getFullYear()

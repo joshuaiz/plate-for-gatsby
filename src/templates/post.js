@@ -6,7 +6,7 @@ import PostMeta from '../components/SiteMeta/PostMeta'
 import PostContent from '../components/Post/PostContent/PostContent'
 import PostComments from '../components/Post/PostComments/PostComments'
 import Layout from '../components/Layout/DefaultLayout'
-import './post.scss'
+import '../components/Post/Post.scss'
 
 const PostTemplate = ({ data }) => {
     const post = data.wordpressPost

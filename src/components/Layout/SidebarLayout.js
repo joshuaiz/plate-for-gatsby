@@ -1,11 +1,15 @@
 import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from '../Header/Header'
-import PostList from '../Post/PostList/PostList'
+import Sidebar from '../Sidebar/Sidebar'
 import './style.scss'
 
 const SidebarLayout = ({ children, data }) => {
-    const posts = data.allWordpressPost.edges
+    // check if we have posts
+    const posts =
+        data.allWordpressPost && data.allWordpressPost.edges
+            ? data.allWordpressPost.edges
+            : null
 
     return (
         <Fragment>
@@ -17,14 +21,11 @@ const SidebarLayout = ({ children, data }) => {
                             <main className="main">{children}</main>
                         </div>
                     </div>
-                    <aside className="sidebar">
-                        {/*
-                         * We are loading recent posts into the sidebar but
-                         * this is just an example.
-                         */}
-                        <h3>Recent Posts</h3>
-                        <PostList posts={posts} />
-                    </aside>
+                    {/*
+                     * We are loading recent posts into the sidebar but
+                     * this is just an example.
+                     */}
+                    <Sidebar posts={posts} />
                 </div>
             </div>
         </Fragment>

@@ -135,7 +135,7 @@ h1.page-title {
     margin-top: 1em;
 }
 
-.page-title, .post-title, .archive-title {
+h1.page-title, h1.post-title, h1.archive-title {
     line-height: 1;
 }
 
@@ -165,36 +165,9 @@ h6, .h6 {
 HEADER STYLES
 *********************/
 
-.header {
-    background: #efefef;
-}
-
-// fix for new header.php schema layout
-#inner-header {
-    display: flex; 
-}
-
-#site-title {
-    margin: 0 0.5em 0 0;
-    font-size: 2em;
-    line-height: inherit;
-    a {
-        color: lighten($sb-black, 12%);
-    }
-}
-
-#bloginfo {
-    display: flex;
-}
-
-#logo {
-    margin-right: 8px;
-    img {
-        // replace /library/images/logo.svg and adjust for your logo size
-        width: 48px;
-        height: 48px;
-    }
-}
+/** 
+* header styles are now in /components/Header/Header.scss
+*/
 
 /*********************
 LIST STYLES
@@ -252,11 +225,6 @@ NAVIGATION STYLES
 Where did the nav menu go?
 Navigation styles for mobile are now in 767down.scss
 if you need them.
-
-We almost always use the Responsive Menu plugin:
-https://wordpress.org/plugins/responsive-menu/ for mobile
-menus but those selectors are there if you want to use the
-default menu.
 
 For your main navigation, styles are in 768up.scss.
 */
@@ -407,10 +375,14 @@ the cool kids do.
  */
 
 /*********************
-POSTS & CONTENT STYLES
+POSTS & PAGES CONTENT STYLES
 *********************/
 
-#content {}
+/*
+These styles apply to both Posts and Pages.
+*/
+
+.content {}
 
 .hentry {
     header {}
@@ -615,218 +587,34 @@ SCREEN READER STYLES
 }
 
 /******************************************************************
-PAGE NAVI STYLES
+PAGINATION STYLES
 ******************************************************************/
 
-// .pagination {
-//     .previous-next {
-//         display: flex;
-//         justify-content: space-between;
-//         margin: 2em 0;
-//         padding: 1.5em 0;
-//         border-top: 1px solid #ddd;
-//         .previous-link, .next-link {
-
-//         }
-//     }
-//     .pagination-list {
-//         display: flex;
-//     }
-// }
-
+/** 
+* pagination styles are now in /components/Pagination/Pagination.scss
+*/
 
 /******************************************************************
 COMMENT STYLES
 ******************************************************************/
 
-/* h3 comment title */
-#comments-title {
-    /* number of comments span */
-    span {}
-}
+/** 
+* comment styles are now in /components/Post/PostComments/PostComments.scss
+*/
 
-.comment-nav {
-    ul {
-        li {}
-    }
-}
-
-.commentlist {
-    margin: 0;
-    list-style-type: none;
-}
-
-.comment {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px dotted #ccc;
-    .comment-author {
-        display: flex;
-        align-items: center;
-    }
-
-    /* vcard */
-    .vcard {
-        cite.fn {
-            a.url {}
-        }
-
-        time {
-            a {
-                &:hover {}
-            }
-        }
-
-        .photo {}
-
-        .avatar {
-            margin-right: 1rem;
-        }
-    } /* end .commentlist .vcard */
-
-    &:last-child {}
-
-    .children {
-        li {}
-
-        /* variations */
-        .comment {}
-
-        .alt {}
-
-        .odd {}
-
-        .even {}
-
-        .depth-1 {} /* change number for different depth */
-        .byuser {}
-
-        .bypostauthor {}
-
-        .comment-author-admin {}
-    } /* end children */
-
-    &[class*=depth-] {}
-    &.depth-1 {}
-    &:not(.depth-1) {}
-    &.depth-2 {}
-    &.depth-3 {}
-    &.depth-4 {}
-    &.depth-5 {}
-    /* general comment classes */
-    &.alt {}
-    &.odd {}
-    &.even {}
-    &.parent {}
-    &.comment {}
-    &.children {}
-    &.pingback {}
-    &.bypostauthor {}
-    &.comment-author {}
-    &.comment-author-admin {}
-    &.thread-alt {}
-    &.thread-odd {}
-    &.thread-even {}
-}
-
-/* comment meta */
-.comment-meta {
-    a {}
-}
-
-.commentmetadata {
-    a {}
-}
-
-/* comment content */
-.comment-content {
-    p {}
-} /* end .commentlist .comment_content */
-
-/* comment reply link */
-.comment-reply-link {
-    &:hover,
-    &:focus {}
-} /* end .commentlist .comment-reply-link */
-
-/* edit comment link */
-.comment-edit-link {
-    margin-right: 6px;
-}
-
-/**********************
-COMMENT FORM STYLES
-***********************/
-
-.comment-respond {}
-
-#reply-title {}
-
-.logged-in-as {}
-
-.comment-form-comment {}
-
-.form-allowed-tags {}
-
-/* comment submit button */
-#submit {}
-
-/* comment form title */
-#comment-form-title {}
-
-/* cancel comment reply link */
-#cancel-comment-reply {
-    a {}
-}
-
-/* logged in comments */
-.comments-logged-in-as {}
-
-/* allowed tags */
-#allowed_tags {}
-
-/* no comments */
-.nocomments {}
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
 
-aside {}
-
-.sidebar {}
-
-.widgettitle {}
-
-.widget {
-    ul {
-        li {
-            &:first-child {}
-
-            &:last-child {}
-
-            a {}
-
-            /* deep nesting */
-            ul {}
-        }
-    }
-}
-
-.no-widgets {}
+/** 
+* sidebar styles are now in /components/Sidebar/Sidebar.scss
+*/
 
 /*********************
 FOOTER STYLES
 *********************/
 
-.footer {
-    clear: both; // are you really still using floats? Tsk, tsk.
-}
-
-.footer-links {
-    ul {
-        li {}
-    }
-}
-
-.copyright {}
+/** 
+* footer styles are now in /components/Footer/Pagination.scss
+*/

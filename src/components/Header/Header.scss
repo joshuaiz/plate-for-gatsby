@@ -1,7 +1,9 @@
 header.header {
+    background: #efefef;
     width: 100%;
 }
 
+// fix for new header.php schema layout
 .inner-header {
     display: flex;
     max-width: 1200px;
@@ -11,8 +13,22 @@ header.header {
 }
 
 .site-title {
-    margin-right: 12px;
+    margin: 0 0.5em 0 0;
     a {
         font-size: 1.5rem;
     }
 }
+
+.bloginfo {
+    display: flex;
+}
+
+.logo {
+    margin-right: 8px;
+    img {
+        // replace /library/images/logo.svg and adjust for your logo size
+        width: 48px;
+        height: 48px;
+    }
+}
+

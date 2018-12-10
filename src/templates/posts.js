@@ -4,8 +4,7 @@ import SiteMeta from '../components/SiteMeta/SiteMeta'
 import Layout from '../components/Layout/DefaultLayout'
 import PostListWithExcerpt from '../components/Post/PostList/PostListWithExcerpt';
 import Pagination from '../components/Pagination/Pagination'
-
-
+import '../components/Post/Post.scss'
 
 // grab the pageContext prop given by createPage in gatsby-node.js
 const PostsPage = ({ pageContext }) => {

@@ -18,7 +18,7 @@ const PostTemplate = ({ data }) => {
         ? data.allWordpressWpComments.edges 
         : null)
 
-    console.log('Post with sidebar', data)
+    // console.log('Post with sidebar', data)
 
     // Yeah this isn't pretty, but it works
     const categories = `${post.categories

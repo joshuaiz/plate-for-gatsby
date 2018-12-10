@@ -47,3 +47,166 @@
         border: 1px solid #dedede;
     }
 }
+
+
+/* 
+* Added in from Plate stylesheets.
+*
+* You may not need these styles/classes
+* but they're here if you do.
+*
+*/
+
+/* h3 comment title */
+.comments-title {
+    /* number of comments span */
+    span {}
+}
+
+.comment-nav {
+    ul {
+        li {}
+    }
+}
+
+.commentlist {
+    margin: 0;
+    list-style-type: none;
+}
+
+.comment {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted #ccc;
+    .comment-author {
+        display: flex;
+        align-items: center;
+    }
+
+    /* vcard */
+    .vcard {
+        cite.fn {
+            a.url {}
+        }
+
+        time {
+            a {
+                &:hover {}
+            }
+        }
+
+        .photo {}
+
+        .avatar {
+            margin-right: 1rem;
+        }
+    } /* end .commentlist .vcard */
+
+    &:last-child {}
+
+    .children {
+        li {}
+
+        /* variations */
+        .comment {}
+
+        .alt {}
+
+        .odd {}
+
+        .even {}
+
+        .depth-1 {} /* change number for different depth */
+        .byuser {}
+
+        .bypostauthor {}
+
+        .comment-author-admin {}
+    } /* end children */
+
+    &[class*=depth-] {}
+    &.depth-1 {}
+    &:not(.depth-1) {}
+    &.depth-2 {}
+    &.depth-3 {}
+    &.depth-4 {}
+    &.depth-5 {}
+    /* general comment classes */
+    &.alt {}
+    &.odd {}
+    &.even {}
+    &.parent {}
+    &.comment {}
+    &.children {}
+    &.pingback {}
+    &.bypostauthor {}
+    &.comment-author {}
+    &.comment-author-admin {}
+    &.thread-alt {}
+    &.thread-odd {}
+    &.thread-even {}
+}
+
+/* comment meta */
+.comment-meta {
+    a {}
+}
+
+.commentmetadata {
+    a {}
+}
+
+/* comment content */
+.comment-content {
+    p {}
+} /* end .commentlist .comment_content */
+
+/* comment reply link */
+.comment-reply-link {
+    &:hover,
+    &:focus {}
+} /* end .commentlist .comment-reply-link */
+
+/* edit comment link */
+.comment-edit-link {
+    margin-right: 6px;
+}
+
+
+/**********************
+COMMENT FORM STYLES
+
+If you end up building a comment form, you
+can use these classes. Or delete them if 
+you're not using them.
+***********************/
+
+.comment-respond {}
+
+.reply-title {}
+
+.logged-in-as {}
+
+.comment-form-comment {}
+
+.form-allowed-tags {}
+
+/* comment submit button */
+.submit {}
+
+/* comment form title */
+.comment-form-title {}
+
+/* cancel comment reply link */
+.cancel-comment-reply {
+    a {}
+}
+
+/* logged in comments */
+.comments-logged-in-as {}
+
+/* allowed tags */
+.allowed_tags {}
+
+/* no comments */
+.nocomments {}
