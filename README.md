@@ -38,7 +38,7 @@ Use WordPress as your content source with a Gatsby front end and be up-and-runni
 ### Features
 - includes main GraphQL queries for pages, posts, post comments, and menus *already set up*. Just add your source url to the project and your posts, pages and menus are there automagically. We love automagically.
 
-- pre-built, ready-to-use components: header, page templates, post templates, footer, menus, comments.
+- pre-built, ready-to-use components: header, page templates, post templates, footer, menus, sidebar, comments.
 
 - modular scss/sass with global and class-based styles. Want to use CSS Modules? Gatsby has [CSS Module support built-in](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and it works with scss out-of-the-box.
 
@@ -67,8 +67,8 @@ In order for Plate to work with Gatsby and to help other developers, we had to s
 
 1. **Use as few dependencies as possible.** Nothing is worse than wanting to dive in to a project and having to spend hours loading all the required modules. Ain't nobody got time for that!
 2. **Maintain the same HTML structure as the traditional WordPress Plate theme wherever possible.** This includes the markup and classes (classNames) which we've tried to mirror from Plate.
-3. Keep the modular scss structure of Plate along with media queries.
-4. Maintain the spirit of Plate by providing useful and informative comments throughout.
+3. **Keep the modular scss structure** of Plate along with media queries.
+4. **Maintain the spirit of Plate** by providing useful and informative comments throughout.
 
 With these requirements, along with the original Plate theme, we hope that Plate for Gatsby can be a great springboard for advanced developers as well as a learning tool for not-so-experienced ones.
 
