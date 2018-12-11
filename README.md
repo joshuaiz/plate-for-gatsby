@@ -40,6 +40,8 @@ Use WordPress as your content source with a Gatsby front end and be up-and-runni
 
 - modular scss/sass with global and class-based styles. Want to use CSS Modules? Gatsby has [CSS Module support built-in](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and it works with scss out-of-the-box.
 
+- SEO/sharing: open graph and meta tags populated with page/post data
+
 More than just a theme, **Plate for Gatsby** includes the main GraphQL queries for posts, pages, menus built-in and ready-to-go. well as your main components: page, post, header, main, sidebar, footer  along with mapped, modular scss so you can start customizing your components and templates right away. 
 
 It's bare-bones but with some smart defaults so you aren't starting from absolutely nothing. The component/HTML structure is mirrored by the default CSS/SCSS classes in an intelligent way to help speed up development and keep everything organized.
