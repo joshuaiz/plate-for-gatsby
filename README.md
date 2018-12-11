@@ -1,7 +1,7 @@
 #   🔘 ⚛️ Plate for Gatsby
 This project is a port of our [Plate](https://github.com/joshuaiz/plate) WordPress starter theme to [Gatsby](https://gatsbyjs.org). It's a fully functioning Gatsby + WordPress starter to grab data from an existing WordPress install. 
 
-Intrigued? Start now or [read more](#what-is-this).
+Intrigued? Start now or <a href="#more">read more</a>.
 
 🚀 **Quick Start:**
 
@@ -26,6 +26,7 @@ Intrigued? Start now or [read more](#what-is-this).
 - [Sourcing from WordPress](https://www.gatsbyjs.org/docs/sourcing-from-wordpress/)
 - [gatsby-source-wordpress docs](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress)
 
+<span id="more"></span>
 ## 👉 What is this?
 
 **Plate for Gatsby** is a super-cool, minimal-set-up custom Gatsby starter to link a current WordPress install to a Gatsby-created site. 
