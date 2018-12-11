@@ -24,6 +24,7 @@ Intrigued? Start now or [read more](#what-is-this).
 - [Using Gatsby with WordPress](https://www.gatsbyjs.com/guides/wordpress/)
 - [WordPress Source Plugin Tutorial](https://www.gatsbyjs.org/docs/wordpress-source-plugin-tutorial/)
 - [Sourcing from WordPress](https://www.gatsbyjs.org/docs/sourcing-from-wordpress/)
+- [gatsby-source-wordpress docs](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress)
 
 ## 👉 What is this?
 
