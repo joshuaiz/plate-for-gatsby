@@ -18,7 +18,7 @@ Intrigued? Start now or <a href="#more">read more</a>.
 
 6. Sweetness 🚀🚀🚀🚀🚀🚀🚀🚀
 
-🔑 If you want to get your hands dirty right away, skip steps 2 & 3 above and just run `gatsby develop` from your project directory. It will grab the WordPress data from the demo site. You can play around with the code to your heart's content.
+🔑 If you want to get your hands dirty right away, skip steps 3 & 4 above and just run `gatsby develop` from your project directory. It will grab the WordPress data from the demo site. You can play around with the code to your heart's content.
 
 ####  🐙 Dive deeper:
 - [Using Gatsby with WordPress](https://www.gatsbyjs.com/guides/wordpress/)
