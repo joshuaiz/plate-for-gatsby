@@ -20,6 +20,22 @@ Intrigued? Start now or <a href="#more">read more</a>.
 
 🔑 If you want to get your hands dirty right away, skip steps 3 & 4 above and just run `gatsby develop` from your project directory. It will grab the WordPress data from the demo site. You can play around with the code to your heart's content.
 
+### Requirements
+1. To expose menus to the REST API, make sure you have the [WP Rest API Menu](https://wordpress.org/support/plugin/wp-api-menus/) plugin installed and activated on your source site. Without that you will get an error with this theme. Or you can disable the menu query if you don't need it.
+2. If you have no featured images for any Posts or Pages, be sure to remove the `featured_media` query in `src/templates/post.js`, `src/templates/postwithsidebar.js` and/or `src/templates/page.js`.
+3. Likewise for `tags` — if you do not have any tags specified, remove the queries for `tags` or you will get an error. 
+
+If you are getting any errors at runtime with `gatsby develop` it may be that the queries are not returning anything so that is the first place to check: if you are querying featured images, make sure you have at least one featured image on your Posts or Pages to query. Likewise with tags, menus, etc. If there's nothing there, Gatsby gets upset. 🤬
+
+Delete any queries you are not using and Gatsby will be happy. 😎
+
+### Recent updates (2019-04-23):
+- fixed `comments` conditional when there are no comments
+- tested for missing items when queried
+- updated dependencies
+- revised individual queries
+- code cleanup
+
 ####  🐙 Dive deeper:
 - [Using Gatsby with WordPress](https://www.gatsbyjs.com/guides/wordpress/)
 - [WordPress Source Plugin Tutorial](https://www.gatsbyjs.org/docs/wordpress-source-plugin-tutorial/)

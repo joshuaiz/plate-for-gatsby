@@ -59,10 +59,6 @@ export const postQuery = graphql`
                 slug
                 name
             }
-            tags {
-                name
-                slug
-            }
             featured_media {
                 source_url
                 alt_text

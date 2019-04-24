@@ -3,7 +3,7 @@ import Parser from 'html-react-parser'
 import './PostComments.scss'
 
 const PostComments = ({ comments }) => {
-    if (!comments) {
+    if (!comments || comments.length === 0 || comments === undefined) {
         return null
     }
     return (
